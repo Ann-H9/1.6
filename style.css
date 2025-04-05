@@ -404,7 +404,8 @@ body {
   background-color: #f8f8f8; }
   @media (min-width: 1120px) {
     .main {
-      width: 90vw; } }
+      width: 80vw;
+      overflow: hidden; } }
   .main__title {
     display: flex;
     height: 65px;
@@ -489,12 +490,12 @@ body {
       .main__text {
         font-size: 1.2em;
         margin-top: 20px;
-        margin-left: -15px;
+        margin-left: -10px;
         width: 90vw;
         font-size: 16px; } }
     @media (min-width: 1120px) {
       .main__text {
-        margin-left: 20px;
+        margin-left: 0;
         font-size: 1.2em; } }
     .main__text--first {
       display: block;
@@ -758,10 +759,13 @@ body {
 
 @media (min-width: 1120px) {
   .desktop {
-    display: block; }
+    display: block;
+    width: 79vw; }
     .desktop__brands {
       display: grid;
       margin: 0;
+      padding: 0;
+      padding-left: 20px;
       grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .desktop__brands__item--hidden {
         display: none; }
@@ -915,17 +919,6 @@ body {
 .table__th {
   display: none; }
 
-.table__text {
-  display: flex;
-  flex-direction: column;
-  width: 420px;
-  margin-left: 40px;
-  margin-bottom: 50px; }
-  .table__text > p {
-    line-height: 25px; }
-  .table__text > a > img {
-    margin-left: 10px; }
-
 @media (min-width: 768px) and (max-width: 1119px) {
   .table {
     display: grid;
@@ -979,18 +972,31 @@ body {
       color: #b5b6bc; }
     .table__priceTerm {
       display: flex;
-      gap: 40px; } }
+      gap: 40px; }
+    .table__text {
+      display: flex;
+      flex-direction: column;
+      width: 420px;
+      margin-left: 80px;
+      margin-bottom: 50px; }
+      .table__text > p {
+        line-height: 25px; }
+      .table__text > a {
+        font-weight: 500; }
+        .table__text > a > img {
+          margin-left: 10px;
+          vertical-align: middle; } }
 
 @media (min-width: 1120px) {
   .table {
     display: grid;
-    width: 1000px;
+    width: 1120px;
     background-color: #ffffff;
-    margin: 10px 40px;
-    border-radius: 5px;
+    margin: 10px 25px;
+    border-radius: 10px;
     padding: 0; }
     .table__item {
-      width: 900px;
+      width: 1080px;
       height: 50px;
       border-radius: 0;
       border: 0;
@@ -1016,17 +1022,17 @@ body {
     .table__item:nth-child(4) {
       border-bottom: none; }
     .table__tbody {
-      width: 700px;
+      width: 850px;
       display: flex;
       justify-content: space-between; }
     .table__button {
       position: relative;
-      bottom: 160px;
-      left: 690px;
+      bottom: 150px;
+      left: 810px;
       z-index: 2; }
     .table__th {
       display: flex;
-      gap: 300px;
+      gap: 390px;
       background-color: #f8f8f8;
       padding: 20px; }
     .table__th > span,
@@ -1034,7 +1040,34 @@ body {
       color: #b5b6bc; }
     .table__priceTerm {
       display: flex;
-      gap: 170px; } }
+      gap: 200px; }
+    .table__text {
+      display: flex;
+      flex-direction: column;
+      width: 420px;
+      margin-left: 40px;
+      margin-bottom: 50px; }
+      .table__text > p {
+        line-height: 25px; }
+      .table__text > a {
+        font-weight: 500; }
+        .table__text > a > img {
+          margin-left: 10px;
+          vertical-align: middle; } }
+
+@media (max-width: 767px) {
+  .table__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 20px; }
+    .table__text > p {
+      line-height: 25px; }
+    .table__text > a {
+      font-weight: 500; }
+      .table__text > a > img {
+        margin-left: 10px;
+        vertical-align: middle; } }
 
 @font-face {
   font-family: 'TT-Lakes';
