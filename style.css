@@ -328,7 +328,7 @@ body {
   height: 100%; }
 
 .blurred {
-  filter: blur(20px); }
+  filter: blur(100px); }
 
 .header__menu {
   display: flex;
@@ -673,7 +673,8 @@ body {
   flex-direction: column;
   min-width: 320px;
   height: 100vh;
-  z-index: 1000; }
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); }
   .aside__header {
     display: flex;
     margin: 20px;
@@ -689,6 +690,10 @@ body {
       background: url(./static/burger1.svg) no-repeat; }
     .aside__header--button-search {
       background: url(./static/search.svg) no-repeat; }
+    @media (min-width: 1120px) {
+      .aside__header--button-burger {
+        margin-right: -80px;
+        opacity: 0; } }
   .aside__menu {
     display: flex;
     flex-direction: column;
@@ -749,7 +754,8 @@ body {
   @media (min-width: 1120px) {
     .aside {
       display: flex;
-      position: relative; }
+      position: relative;
+      box-shadow: none; }
       .aside--flex {
         display: flex; } }
 
@@ -879,11 +885,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px;
+    padding-right: 0;
     min-width: calc(100vw - 320px);
     background-color: #f8f8f8;
     border-top: 1px solid #d9fff5; }
     .footer__text--gray {
-      color: #b5b6bc; } }
+      color: #b5b6bc; }
+    .footer__text--right {
+      width: 340px;
+      text-align: right;
+      position: relative;
+      right: 80px; } }
 
 @media (max-width: 767px) {
   .footer {
@@ -990,13 +1002,13 @@ body {
 @media (min-width: 1120px) {
   .table {
     display: grid;
-    width: 1120px;
+    width: 94%;
     background-color: #ffffff;
     margin: 10px 25px;
     border-radius: 10px;
     padding: 0; }
     .table__item {
-      width: 1080px;
+      width: 97%;
       height: 50px;
       border-radius: 0;
       border: 0;
@@ -1022,17 +1034,17 @@ body {
     .table__item:nth-child(4) {
       border-bottom: none; }
     .table__tbody {
-      width: 850px;
+      width: 85%;
       display: flex;
       justify-content: space-between; }
     .table__button {
       position: relative;
       bottom: 150px;
-      left: 810px;
+      left: 858px;
       z-index: 2; }
     .table__th {
       display: flex;
-      gap: 390px;
+      gap: 430px;
       background-color: #f8f8f8;
       padding: 20px; }
     .table__th > span,
@@ -1040,7 +1052,7 @@ body {
       color: #b5b6bc; }
     .table__priceTerm {
       display: flex;
-      gap: 200px; }
+      gap: 260px; }
     .table__text {
       display: flex;
       flex-direction: column;
