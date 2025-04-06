@@ -488,7 +488,7 @@ body {
     font-weight: 400; }
     @media (min-width: 768px) and (max-width: 1119px) {
       .main__text {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-top: 20px;
         margin-left: -10px;
         width: 90vw;
@@ -496,7 +496,7 @@ body {
     @media (min-width: 1120px) {
       .main__text {
         margin-left: 0;
-        font-size: 1.2em; } }
+        font-size: 1em; } }
     .main__text--first {
       display: block;
       margin-left: 0; }
