@@ -1007,6 +1007,9 @@ body {
     cursor: pointer;
     display: inline-block;
     margin: 0; }
+    .table__button:hover {
+      transform: scale(1.05);
+      transition: ease 1s; }
   .table__text {
     display: flex;
     flex-direction: column;
@@ -1020,6 +1023,9 @@ body {
       .table__text > a > img {
         margin-left: 10px;
         vertical-align: middle; }
+    @media (max-width: 767px) {
+      .table__text {
+        width: 320px; } }
   @media (max-width: 767px) {
     .table {
       display: none; } }
