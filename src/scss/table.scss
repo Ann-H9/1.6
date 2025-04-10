@@ -93,6 +93,11 @@
     cursor: pointer;
     display: inline-block;
     margin: 0;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: ease 1s;
+    }
   }
 
   &__text {
