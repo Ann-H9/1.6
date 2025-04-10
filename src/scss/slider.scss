@@ -1,0 +1,129 @@
+.swiper {
+  display: block;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 240px;
+    height: 72px;
+    background-color: $colorW;
+    border-radius: 5px;
+    border: 1px solid $borderG;
+
+    &--second {
+      height: 160px;
+    }
+
+    &--third {
+      display: flex;
+      width: 260px;
+      height: 200px;
+      text-align: left;
+      line-height: 20px;
+      padding-top: 20px;
+      padding-left: 15px;
+      margin-left: 40px;
+      margin-top: -40px;
+      font-size: 14px;
+    }
+
+    &--th {
+      display: block;
+      size: 14px;
+      font-weight: 100;
+    }
+
+    &--td {
+      display: block;
+      size: 14px;
+      margin-bottom: 10px;
+    }
+    &-title {
+      size: 16px;
+      margin: 10px 0 120px 15px;
+    }
+  }
+
+  &__item-img {
+    margin-left: 15px;
+  }
+
+  &__button {
+    padding: 0;
+    margin: 15px 10px;
+    width: 40px;
+    height: 40px;
+    background: url(../img/go.svg) no-repeat;
+    border: none;
+
+    &-second {
+      display: flex;
+      align-self: flex-end;
+    }
+
+    &-first:hover,
+    &-second:hover {
+      transform: rotate(360deg) scale(1.2);
+      transition: ease 2s;
+      cursor: pointer;
+    }
+
+    &-third {
+      position: relative;
+      top: 160px;
+      left: 160px;
+      border: none;
+      width: 119px;
+      height: 32px;
+      text-align: left;
+      border-radius: 20px;
+      color: $colorW;
+      padding: 8px;
+      padding-left: 13px;
+      font-weight: 600;
+      font-size: 12px;
+      background: url(../img/goside.svg) no-repeat right;
+      background-position: 90px 4px;
+      background-color: $colorBtn;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: ease 1s;
+      }
+    }
+  }
+
+  &-wrapper {
+    list-style: none;
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  &-pagination-bullet {
+    position: relative;
+    bottom: -5px;
+    background-color: $colorPag;
+  }
+}
+
+@include respond-to(ipad) {
+  .swiper-pagination {
+    display: none;
+  }
+  .slider-3 {
+    display: none;
+  }
+}
+
+@include respond-to(desktop) {
+  .swiper-pagination {
+    display: none;
+  }
+  .slider-3 {
+    display: none;
+  }
+}

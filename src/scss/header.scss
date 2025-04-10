@@ -1,0 +1,94 @@
+.header {
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    &--first {
+      display: flex;
+      gap: 15px;
+      padding: 15px;
+      align-items: center;
+
+      @include respond-to(ipad) {
+        width: 100vw;
+        justify-content: space-between;
+      }
+      &-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+
+    &--second {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      margin-left: -20px;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url(../img/burger.svg) no-repeat;
+  }
+
+  &__divider {
+    &--first,
+    &--second {
+      max-height: 32px;
+    }
+  }
+
+  &__ipad {
+    display: none;
+    @include respond-to(ipad) {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond-to(ipad) {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__call {
+    background: url(../img/call.svg) no-repeat;
+  }
+  &__chat {
+    background: url(../img/chat.svg) no-repeat;
+  }
+  &__profile {
+    background: url(../img/profile.svg) no-repeat;
+  }
+
+  &__request-icon {
+    background: url(../img/repair.svg) no-repeat;
+  }
+
+  &__status-icon {
+    background: url(../img/checkstatus.svg) no-repeat;
+  }
+
+  &__call,
+  &__chat,
+  &__profile,
+  &__request-icon,
+  &__status-icon {
+    width: 40px;
+    height: 40px;
+    border: none;
+  }
+}

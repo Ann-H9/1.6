@@ -1,0 +1,37 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'header';
+@import 'main';
+@import 'head-slider';
+@import 'slider';
+@import 'aside';
+@import 'desktop';
+@import 'modal';
+@import 'footer';
+@import 'table';
+
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+@font-face {
+  font-family: 'TT-Lakes';
+  src: local('TT-Lakes bold'), url('./fonts/TTLakes-Bold.woff') format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'TT-Lakes';
+  src: local('TT-Lakes'), url('./fonts/TTLakes-Regular.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'TT-Lakes';
+  src: local('TT-Lakes'), url('./fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'TT-Lakes';
+  src: local('TT-Lakes'), url('./fonts/TTLakes-ExtraLight.woff') format('woff');
+  font-weight: 100;
+}

@@ -1,0 +1,80 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $colorW;
+  z-index: 1000;
+
+  &__call,
+  &__feedback {
+    display: none;
+    width: 350px;
+    height: 100vh;
+    flex-direction: column;
+  }
+  &__close {
+    align-self: left;
+    margin: 20px;
+    width: 40px;
+    height: 55px;
+    border: 0;
+    background: url('../img/burger1.svg') no-repeat;
+  }
+
+  &__title {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    font-family: 'TT-Lakes', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+
+  &__input {
+    margin: 20px;
+    text-align: left;
+    padding-left: 10px;
+    width: 288px;
+    height: 48px;
+    color: $borderG;
+    border: 1px solid $borderG;
+    border-radius: 10px;
+
+    &--wide {
+      height: 118px;
+      margin-bottom: 0;
+
+      &::placeholder {
+        position: relative;
+        bottom: 20px;
+      }
+    }
+
+    &--pink {
+      color: $colorBtn;
+    }
+  }
+
+  &__text {
+    margin-left: 20px;
+  }
+
+  &__button {
+    display: flex;
+    align-self: flex-end;
+    margin-right: 20px;
+    border: none;
+    width: 119px;
+    height: 32px;
+    border-radius: 20px;
+    color: $colorW;
+    padding: 9px;
+    padding-left: 14px;
+    font-weight: 600;
+    font-size: 12px;
+    background: url(../img/goside.svg) no-repeat;
+    background-position: 90px 4px;
+    background-color: $colorBtn;
+    cursor: pointer;
+  }
+}

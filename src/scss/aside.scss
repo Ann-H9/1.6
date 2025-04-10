@@ -1,0 +1,143 @@
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $colorW;
+  display: none;
+  flex-direction: column;
+  min-width: 320px;
+  height: 100vh;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+
+  &__header {
+    display: flex;
+    margin: 35px 20px 40px 20px;
+    text-align: center;
+    justify-content: space-between;
+
+    &-logo {
+      transform: translateX(-40px);
+    }
+
+    &--button-burger,
+    &--button-search {
+      align-self: center;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      background: url('../img/burger1.svg') no-repeat;
+    }
+
+    &--button-search {
+      background: url('../img/search.svg') no-repeat;
+    }
+    @include respond-to(desktop) {
+      &--button-burger {
+        margin-right: -95px;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include respond-to(desktop) {
+    &__ul {
+      padding-bottom: 60%;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__title {
+      display: flex;
+      gap: 15px;
+      font-family: 'TT-Lakes', sans-serif;
+      font-weight: 100;
+      font-size: 1.1em;
+    }
+  }
+
+  &__ul-item {
+    list-style: none;
+    display: block;
+    padding-bottom: 30px;
+    margin-left: -20px;
+    line-height: 24px;
+
+    :last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    &__buttons {
+      display: flex;
+      gap: 15px;
+      margin-left: 20px;
+    }
+
+    &__button {
+      width: 40px;
+      height: 40px;
+      border: none;
+
+      &--first {
+        background: url('../img/call.svg') no-repeat;
+      }
+
+      &--second {
+        background: url('../img/chat.svg') no-repeat;
+      }
+
+      &--third {
+        background: url('../img/profile.svg') no-repeat;
+      }
+    }
+
+    &__email {
+      display: block;
+      color: black;
+      margin: 20px 25px;
+    }
+
+    &__tel {
+      display: block;
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &__lang {
+      padding-bottom: 10px;
+      margin-left: 15px;
+      margin-top: 40px;
+      margin-bottom: auto;
+
+      &-button {
+        background: none;
+        border: none;
+      }
+    }
+  }
+  button:hover,
+  a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  @include respond-to(desktop) {
+    display: flex;
+    position: relative;
+    box-shadow: none;
+
+    &--flex {
+      display: flex;
+    }
+  }
+}

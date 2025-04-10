@@ -1,0 +1,65 @@
+@include respond-to(desktop) {
+  .footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-right: 0;
+    min-width: calc(100vw - 320px);
+    background-color: $color;
+    border-top: 1px solid $border;
+
+    &__text--gray {
+      color: $colorPag;
+    }
+    &__text--right {
+      width: 340px;
+      text-align: right;
+      position: relative;
+      right: 80px;
+    }
+  }
+}
+@include respond-to(mobile) {
+  .footer {
+    display: block;
+
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    background-color: $color;
+    border-top: 1px solid $border;
+    line-height: 30px;
+
+    &__text--gray {
+      color: $colorPag;
+    }
+  }
+}
+
+@include respond-to(ipad) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $color;
+
+    &__text--left {
+      text-align: left;
+      flex: 1;
+    }
+    &__text--center {
+      text-align: center;
+      flex: 1;
+    }
+    &__text--right {
+      text-align: right;
+      flex: 1;
+    }
+    &__text--gray {
+      color: $colorPag;
+    }
+  }
+}

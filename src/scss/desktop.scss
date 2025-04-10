@@ -1,0 +1,84 @@
+.desktop__brands-button,
+.desktop__brands-button--second {
+  display: none;
+}
+
+@include respond-to(desktop) {
+  .desktop {
+    display: block;
+    width: 78vw;
+    margin-left: 30px;
+
+    &__brands {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      &__item {
+        &--hidden {
+          display: none;
+        }
+        &--hiddenIpad {
+          display: flex;
+        }
+      }
+      &-button--second,
+      &-button {
+        display: flex;
+        margin: 30px 0px;
+        padding-left: 30px;
+        background: url(../img/expand.svg) no-repeat left;
+        border: none;
+      }
+      &-button:hover {
+        transform: scale(1.05);
+        transition: ease 1s;
+        cursor: pointer;
+      }
+    }
+
+    &__item--hidden {
+      display: none;
+    }
+    &__item--hiddenIpad {
+      display: flex;
+    }
+  }
+}
+
+@include respond-to(ipad) {
+  .desktop {
+    display: block;
+
+    &__brands {
+      display: grid;
+      margin: 0;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      &__item {
+        &--hidden {
+          display: none;
+        }
+      }
+      &-button--second,
+      &-button {
+        display: flex;
+        margin: 30px 40px;
+        padding-left: 30px;
+        background: url(../img/expand.svg) no-repeat left;
+        border: none;
+      }
+      &-button:hover {
+        transform: scale(1.05);
+        transition: ease 1s;
+        cursor: pointer;
+      }
+    }
+
+    &__item--hidden {
+      display: none;
+    }
+  }
+}

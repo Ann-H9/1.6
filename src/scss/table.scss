@@ -1,0 +1,121 @@
+.table {
+  &__wrapper {
+    width: 74vw;
+    margin: 30px;
+    margin-top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  &__head {
+    background-color: $color;
+  }
+
+  &__th {
+    padding: 20px;
+    color: $text2;
+    text-align: left;
+    font-weight: normal;
+
+    &--button {
+      width: 119px;
+    }
+  }
+
+  &__body {
+    background-color: $colorW;
+  }
+
+  &__row {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      height: 1px;
+      background-color: $borderG;
+    }
+    &:last-child::after {
+      content: none;
+    }
+
+    &--first {
+      .table__td--first {
+        border-top-left-radius: 5px;
+      }
+
+      .table__td--last {
+        border-top-right-radius: 5px;
+      }
+    }
+
+    &--last {
+      .table__td:first-child {
+        border-bottom-left-radius: 5px;
+      }
+
+      .table__td:last-child {
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+
+  &__td {
+    padding: 20px;
+
+    &--button {
+      text-align: right;
+      padding-right: 20px;
+      width: 119px;
+    }
+  }
+
+  &__button {
+    border: none;
+    width: 119px;
+    height: 32px;
+    text-align: left;
+    border-radius: 20px;
+    color: $colorW;
+    padding: 8px;
+    padding-left: 13px;
+    font-weight: 600;
+    font-size: 12px;
+    background: url(../img/goside.svg) no-repeat right;
+    background-color: $colorBtn;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+
+    & > p {
+      line-height: 25px;
+    }
+    & > a {
+      font-weight: 500;
+
+      & > img {
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
