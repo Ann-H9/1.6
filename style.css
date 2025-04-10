@@ -783,7 +783,7 @@ body {
 @media (min-width: 1120px) {
   .desktop {
     display: block;
-    width: 78vw;
+    width: 83vw;
     margin-left: 30px; }
     .desktop__brands {
       display: grid;
@@ -903,7 +903,7 @@ body {
     align-items: center;
     padding: 40px;
     padding-right: 0;
-    min-width: calc(100vw - 320px);
+    min-width: calc(80vw - 320px);
     background-color: #f8f8f8;
     border-top: 1px solid #d9fff5; }
     .footer__text--gray {
@@ -950,7 +950,7 @@ body {
   border-collapse: separate;
   border-spacing: 0; }
   .table__wrapper {
-    width: 74vw;
+    width: 76vw;
     margin: 30px;
     margin-top: 0;
     border-radius: 5px;
