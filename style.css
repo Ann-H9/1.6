@@ -405,7 +405,7 @@ body {
   background-color: #f8f8f8; }
   @media (min-width: 1120px) {
     .main {
-      width: 80vw; } }
+      width: 100%; } }
   .main__title {
     display: flex;
     height: 65px;
@@ -783,7 +783,7 @@ body {
 @media (min-width: 1120px) {
   .desktop {
     display: block;
-    width: 83vw;
+    width: 100%;
     margin-left: 30px; }
     .desktop__brands {
       display: grid;
